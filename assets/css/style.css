@@ -1,0 +1,96 @@
+/* ============================================================
+   Online Job Portal - custom styles (blue / white theme)
+   Bootstrap 5 does most of the work; these are small extras.
+   ============================================================ */
+:root {
+    --jp-blue: #0d6efd;
+    --jp-dark-blue: #0a3d91;
+    --jp-light: #f4f7fc;
+}
+
+body {
+    background: var(--jp-light);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+/* ---------- Hero (home page) ---------- */
+.hero {
+    background: linear-gradient(135deg, var(--jp-dark-blue) 0%, var(--jp-blue) 100%);
+    padding: 40px 0 60px;
+}
+.search-box .form-control,
+.search-box .form-select { border-color: #dbe4f3; }
+
+/* ---------- Banner on inner pages ---------- */
+.page-banner {
+    background: linear-gradient(135deg, var(--jp-dark-blue) 0%, var(--jp-blue) 100%);
+}
+
+/* ---------- Headings ---------- */
+.section-title {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--jp-blue);
+    border-radius: 2px;
+}
+
+/* ---------- Cards ---------- */
+.job-card,
+.category-card,
+.stat-card {
+    border: 1px solid #e3eaf6;
+    border-radius: 12px;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.job-card:hover,
+.category-card:hover,
+a.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, .12) !important;
+}
+.card { border-radius: 12px; }
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--jp-blue);
+    line-height: 1.2;
+}
+
+.auth-card { border: none; border-radius: 14px; }
+
+.profile-photo {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--jp-blue);
+}
+
+/* ---------- Tables ---------- */
+.table th { font-weight: 600; font-size: .9rem; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background: #0b1f44;
+    color: #b8c4dc;
+}
+.site-footer a {
+    color: #b8c4dc;
+    text-decoration: none;
+}
+.site-footer a:hover { color: #fff; }
+
+@media (max-width: 767px) {
+    .hero h1 { font-size: 1.8rem; }
+    .stat-number { font-size: 1.5rem; }
+}
